@@ -83,8 +83,37 @@ document.querySelector(".conv-btn").addEventListener("click", () =>{
 // -----------------------speech-converte end--------------------
 
 
-// -----------------------start--------------------
-// -----------------------end--------------------
+// ----------------------- drag downstart--------------------
+
+let lists = document.getElementsByClassName('list');
+let rightBox = document.getElementById('dragDown-right')
+let leftBox = document.getElementById('dragDown-left')
+
+for(list of lists){
+    list.addEventListener('dragstart' , function(e){
+        let selected = e.target;
+
+        rightBox.addEventListener('dragover', function(e){
+            e.preventDefault();
+        })
+
+        rightBox.addEventListener('drop' , function(e){
+            rightBox.appendChild(selected);
+            selected = null;
+        });
+
+        leftBox.addEventListener('dragover', function(e){
+            e.preventDefault();
+        })
+
+        leftBox.addEventListener('drop' , function(e){
+            leftBox.appendChild(selected);
+            selected = null;
+        });
+    })
+}
+
+// -----------------------  drag down end--------------------
 
 
 // -----------------------start--------------------

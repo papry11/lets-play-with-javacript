@@ -10,20 +10,24 @@
     text-transform:capitalize;
 }
 
-    .container{
-    display: flex;
-    justify-content:space-around;
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    
 } 
 
 body{
-    background-color: #ffecec;
+    background-color:#0b132b;
+
+
+    
 }
 
 .card{
     width: 90%;
     max-width: 400px;
     color: #fff;
-    margin:50px auto 50px;
+    margin:50px;
     border: 1px solid wheat;
     border-radius: 20px;
     padding: 40px 35px;
@@ -119,9 +123,7 @@ body{
     margin-top: -6px;
 }
 
-.weather{
-    display: none;
-}
+
 
 .error{
     text-align: center;
@@ -148,7 +150,7 @@ body{
     font-weight: 500;
     margin-bottom: 20px;
     margin-top: -50px;
-    color:#555;
+    color:#bdbcbc;
 }
 
 .speech-converter h1 span{
@@ -214,8 +216,53 @@ body{
 
 
 
-/* --------------------start------------------- */
-/* --------------------end------------------- */
+/* --------------------drag down start------------------- */
+.drag-drop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dragDown-left, #dragDown-right{
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    border:1px dashed #fff;
+}
+
+.drag-drop .list{
+    background:#e91e63;
+    height: 60px;
+    margin: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    font-size:18px;
+}
+
+.drag-drop .list img{
+    width: 10px;
+    margin-right: 15px;
+    margin-left:20px;
+}
+
+.drag-down-cont h1{
+    color:#e91e63;
+    
+
+}
+
+.drag-down-cont{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+/* --------------------drag down end------------------- */
 
 
 
