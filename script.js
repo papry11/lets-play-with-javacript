@@ -1,3 +1,17 @@
+
+
+// -----------------------light theme start-------------------
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
+
+themeIcon.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    const isLightMode = body.classList.contains('light-theme');
+    themeIcon.src = isLightMode ? 'images/moon.png' : 'images/sun.png';
+});
+// -----------------------light theme end--------------------
+
+
 // -----------------------weather app start--------------------
 
 
