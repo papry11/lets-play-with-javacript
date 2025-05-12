@@ -5,6 +5,8 @@
 :root{
     --bg-color:#0B132B;
     --color:#333;
+    --main-colour:linear-gradient(90deg, hsla(202, 71%, 27%, 1) 0%, hsla(176, 45%, 66%, 1) 100%);
+    --text-color:#2689bb;
 }
 body {
     background-color:var(--bg-color);
@@ -48,13 +50,16 @@ body {
 .card{
     width: 90%;
     max-width:370px;
+    
     color: #fff;
     margin:50px;
     border: 1px solid wheat;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
-    background-image: linear-gradient(to right bottom, #dc8be8, #bf8aec, #9e8aee, #7889ec, #4988e7);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    background:var(--main-colour)
     
 }
 
@@ -111,10 +116,8 @@ body {
 .card .app-line{
     font-size:22px;
     font-weight: 500;
-    
-    
-   
 }
+
 
 .weather h2{
     font-size:35px;
@@ -146,7 +149,6 @@ body {
 }
 
 
-
 .error{
     text-align: center;
     font-size: 14px;
@@ -165,6 +167,7 @@ body {
     align-items: center;
     justify-content:center ;
     flex-direction: column;
+    min-height: 500px;
 }
 
 .speech-converter h1{
@@ -173,28 +176,28 @@ body {
     margin-bottom: 20px;
     margin-top: -50px;
     color:#bdbcbc;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .speech-converter h1 span{
-    color:#eb3d6b;
+    color:var(--text-color);
 }
 .speech-converter textarea{
     width: 600px;
     height: 250px;
-    background-image: linear-gradient(to right bottom, #dc8be8, #bf8aec, #9e8aee, #7889ec, #4988e7);
-    color: #fff;
+   background-color:#EBFFFC ;
     font-size: 15px;
-    border: 0;
+    border:1px solid rgb(33, 102, 148) ;
     outline: 0;
     padding: 20px;
     border-radius: 10px;
     margin: 30px;
-   
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .speech-converter textarea::placeholder{
-    font-size: 16px;
-    color:#fff;
+    font-size: 18px;
+    color:black;
 }
 .speech-converter  .row{
     width: 600px;
@@ -204,7 +207,7 @@ body {
 }
 
 .speech-converter button{
-    background:#ff2963;
+    background:var(--main-colour);
     color: #fff;
     font-size: 16px;
     padding: 10px 30px;
@@ -212,6 +215,7 @@ body {
     border: 0;
     outline: 0;
     cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .speech-converter button i{
@@ -220,11 +224,11 @@ body {
 
 .speech-converter select{
     flex: 1;
-    background: #938fe0;
+    background-color:#EBFFFC;
     height: 50px;
     padding:0 20px;
     outline:none;
-    border: 0;
+    border:1px solid rgb(33, 102, 148) ;
     border-radius: 35px;
     appearance: none;
     background-image: url(images/dropdown.png);
@@ -232,6 +236,7 @@ body {
     background-size: 15px;
     background-position-x: calc(100% - 20px);
     background-position-y: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 /* --------------------speech-converte end------------------- */
 
@@ -246,13 +251,14 @@ body {
 }
 #dragDown-left, #dragDown-right{
     width: 300px;
-    min-height: 400px;
+    min-height: 500px;
     margin: 20px;
-    border:1px dashed #e91e63;
+    border:1px dashed  hsla(202, 71%, 27%, 1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .drag-drop .list{
-    background:#e91e63;
+    background: var(--main-colour);
     height: 60px;
     margin: 30px;
     color: #fff;
@@ -260,6 +266,7 @@ body {
     align-items: center;
     cursor: grab;
     font-size:18px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .drag-drop .list img{
@@ -269,7 +276,7 @@ body {
 }
 
 .drag-down-cont h1{
-    color:#e91e63;
+    color:var(--text-color)
     
 
 }
@@ -287,6 +294,82 @@ body {
 /* --------------------drag down end------------------- */
 
 
-/* --------------------start------------------- */
-/* --------------------end------------------- */
+/* --------------------toDo-note start------------------- */
 
+.toDo-note{
+    margin: 30px;
+    border: 1px solid var(--text-color);
+    padding: 20px;
+    margin-top: 110px;
+     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toDo-note h1{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+    color:var(--text-color);
+}
+
+.toDo-note h1 img{
+    width: 60px;
+    margin-right: 8px;
+}
+
+.toDo-note button{
+    display: flex;
+    align-items: center;
+    background: var(--main-colour);
+    color:#fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container button img{
+    width: 25px;
+    margin-right: 8px;
+}
+
+.toDo-note .input-box{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height:70px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.toDo-note .input-box img{
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* --------------------toDo-note end------------------- */
+
+
+
+/* media query */
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 16px; /* আইটেমগুলোর মাঝে ফাঁকা জায়গা */
+  }
+}
